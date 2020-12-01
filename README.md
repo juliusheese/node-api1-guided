@@ -39,8 +39,8 @@ Here is a table with the `endpoint` descriptions:
 
 | Action                | URL                | Method | Response          |
 | :-------------------- | :----------------- | :----- | :---------------- |
-| Add a user            | /api/users         | POST   | the new user      |
-| View list of users    | /api/users         | GET    | array of users    |
-| View user details     | /api/users/{id}    | GET    | a single user     |
-| Update user           | /api/users/{id}    | PUT    | updated user      |
-| Remove a user         | /api/users/{id}    | DELETE | deleted user      |
+| Add a user            | /users             | POST   | the new user      |
+| View list of users    | /users             | GET    | array of users    |
+| View user details     | /users/{id}        | GET    | a single user     |
+| Update user           | /users/{id}        | PUT    | updated user      |
+| Remove a user         | /users/{id}        | DELETE | deleted user      |
