@@ -8,58 +8,39 @@ The code for the guided project will be written in a single file for simplicity.
 
 ## Prerequisites
 
-- an HTTP client like [Postman](https://www.getpostman.com/downloads/) or [Insomnia](https://insomnia.rest/download/).
+- an HTTP client like [Postman](https://www.getpostman.com/downloads/) or [Insomnia](https://insomnia.rest/download/)
 
 ## Project Setup
 
-- [ ] **fork** and clone this repository.
-- [ ] **CD into the folder** where you cloned **your fork**.
-- [ ] type `npm install` to download dependencies.
+- [ ] Clone this repository
+- [ ] **CD into the folder** where you cloned the repo
+- [ ] Type `npm install` to download dependencies
 
 ## Assignment
 
-Build a RESTful Web API to manage _"Lessons"_ and _"Hubs"_. A _Hub_ is a group chat channel that brings together an instructor and a group of students from the same cohort as they work on a _Lesson_.
+Build a RESTful Web API to manage a basic list of users for your app.
 
-An example would be a _Hub_ created to go over the "Introduction to Node and Express" lesson for the _Web 1_ cohort.
+A User has:
 
-A Lesson has:
-
-- a unique `id`.
-- a `name`.
-
-A Hub has:
-
-- a unique `id`.
-- a `name`.
-- a `lessonId` that connects it to the corresponding Lesson.
-- a `cohort`.
+- a unique `id`
+- a `name`
 
 ### Features
 
 The Web API must provide a set of `endpoints` to fulfill the following needs:
 
-- add a new Lesson.
-- view a list of existing Lessons.
-- view the details of a single Lesson
-- update the information of an existing Lesson.
-- remove a Lesson.
-- add a new Hub.
-- view a list of existing Hubs.
-- view the details of a single Hub
-- update the information of an existing Hub.
-- remove a Hub.
+- add a new user
+- view a list of existing users
+- view the details of a single user
+- update the information of an existing user
+- remove a user
 
 Here is a table with the `endpoint` descriptions:
 
-| Action               | URL               | Method | Response         |
-| :------------------- | :---------------- | :----- | :--------------- |
-| Add a Lesson         | /api/lessons      | POST   | the new Lesson   |
-| View list of Lessons | /api/lessons      | GET    | array of Lessons |
-| View Lesson details  | /api/lessons/{id} | GET    | a Lesson         |
-| Update Lesson        | /api/lessons/{id} | PATCH  | updated Lesson   |
-| Remove a Lesson      | /api/lessons/{id} | DELETE | deleted Lesson   |
-| Add a Hub            | /api/hubs         | POST   | the new Hub      |
-| View list of Hubs    | /api/hubs         | GET    | array of Hubs    |
-| View Hub details     | /api/hubs/{id}    | GET    | a Hub            |
-| Update Hub           | /api/hubs/{id}    | PATCH  | updated Hub      |
-| Remove a Hub         | /api/hubs/{id}    | DELETE | deleted Hub      |
+| Action                | URL                | Method | Response          |
+| :-------------------- | :----------------- | :----- | :---------------- |
+| Add a user            | /api/users         | POST   | the new user      |
+| View list of users    | /api/users         | GET    | array of users    |
+| View user details     | /api/users/{id}    | GET    | a single user     |
+| Update user           | /api/users/{id}    | PUT    | updated user      |
+| Remove a user         | /api/users/{id}    | DELETE | deleted user      |
