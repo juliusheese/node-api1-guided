@@ -1,5 +1,6 @@
 {
 	"private": true,
+	"scripts": {},
 	"devDependencies": {
 		"nodemon": "^2.0.7"
 	},
