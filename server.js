@@ -1,14 +1,35 @@
-const http = require("http")
+const express = require("express")
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200
+const server = express()
 
-    res.setHeader("Content-Type", "text/html")
-    res.write(`<h1>Hello, World</h1>`)
+const db = require("./database")
 
-    res.end()
+
+server.get("/", (req, res) => {
+    res.json({message :"Hello, Welt" })
+})
+server.get("/users", (req,res) => {
+    const users = db.getUsers()
+    res.json(users)
+})
+server.get("/users/:id", (req,res) => {
+    const users = db.getUserById(req.params.id)
+
+    if 
+        (res.json(user))  
+        
+      else {
+        res.status(404).json({
+            messege: "user not found",
+        })
+    }
+})
+server.post("/users", (req,res) =>{
+    const newUser = db.createUser({
+        name: req.body.name,
+    })
+    res.json(newUser);
 })
 
-server.listen(8080, () => {
-    console.log("strt on p 8080")
-})
+
+module.exports = server
